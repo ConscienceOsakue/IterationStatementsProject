@@ -1,75 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace IterationStatements
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            for (int i = 0; 0 < 5; i++)
+            Console.Write("Enter the price of the cake: ");
+            if (int.TryParse(Console.ReadLine(), out int cakePrice))
             {
-                Console.WriteLine($"{i}");
+                Console.Write("Enter the price of the cookie: ");
+                if (int.TryParse(Console.ReadLine(), out int cookiePrice))
+                {
+                    if (AreEqual(cakePrice, cookiePrice))
+                    {
+                        Console.WriteLine("The two price are equal.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("The two price are not equal.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input for the cookie price.");
+                }
             }
-            for (int i = 0; i < 5; i++)
+            else
             {
-                Console.WriteLine($"{i}");
+                Console.WriteLine("Invalid input for the cake price.");
             }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 1; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
+        }
 
-            //for (int i = 0; i < 5; i++)
-            //Console.WriteLine($"{I}");
+        public static bool AreEqual(int cakePrice, int cookiePrice)
+        {
+            return cakePrice == cookiePrice;
         }
     }
 }
