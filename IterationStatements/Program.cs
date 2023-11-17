@@ -7,79 +7,25 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-            //TODO - Read each comment and complete its instruction
-            // like the example below
+            //Write a method that will print to the console all numbers 1000 through - 1000
 
-            //Create a List called "numbers" - DONE!
-            var numbers = new List<int>();
+            Console.WriteLine("Welcom, you are assigne 1000 Orangies. Type in the number of Orangies assign to you below! ");
+            var userInput = Console.ReadLine();
+            var myOrangies = int.Parse(userInput);
+            var listOfMyOrangies = new List<double>();
 
-            //-----START HERE------------------------------------------
-            //Create a variable of type int and name it num
-            //initialize the variable with a value of 0
-            var myNum = 0;
-
-
-
-            // Create a do-while loop and use the template below:
-
-            {
-                // Increment num by 1
-
-                // Then add num to the collection - numbers
-                // Hint: reference num inside of the Add method's parentheses
-
-            } // <---- While your variable is less than 100
-
+            //A do-while loop that will decrease the number of oragies till -1000:
             do
             {
-                myNum++;
-                numbers.Add( myNum );
 
-            } while ( myNum < 100 );
+                myOrangies--;
+                listOfMyOrangies.Add(myOrangies);
 
+            } while (myOrangies >= -999);
 
-
-            // Create a while loop
-            // <--- While num is less than 200
-            while (myNum < 200) 
+            foreach (var orange in listOfMyOrangies)
             {
-                // Increment num by 1
-                myNum ++;
-
-                // Then add num to the collection numbers
-                numbers.Add( myNum );
-
-                //HINT: copy how this was done in the do while loop
-
-            }
-
-
-            // This is to show the user that the numbers will start increasing on the console
-            Console.WriteLine("Increase:");
-
-
-            // Create a foreach loop using the collection - numbers
-            //In the scope of the foreach loop, print each number in numbers
-            foreach ( int item in numbers )
-            {
-                Console.WriteLine($"{item}");
-            }
-
-
-
-            Console.WriteLine("");
-            Console.WriteLine("Decrease:");
-
-
-            // Create a for loop - this will print the numbers in reverse order - from 200 to 1
-            // in your initializer set the value of i to 199
-            // in your conditional, as long as i is less than or equal to the amount of items in "numbers" - use (numbers.Count)
-            // AND as long as i is greater than or equal to 0
-            // Decrement i by 1
-
-            for (var i = 199; i <= numbers.Count && i >= 0; i--)
-            {
-                Console.WriteLine($"{numbers[i]}");
+                Console.WriteLine($"{orange} orangies");
             }
 
             //------------End of exercise
