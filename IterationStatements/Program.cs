@@ -7,25 +7,23 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-            //Write a method that will print to the console all numbers 1000 through - 1000
+            //Write a method that will print to the console numbers 3 through 999 by 3 each time
+            Console.WriteLine($"Hello, what is you name?");
+            var playerName = Console.ReadLine();
 
-            Console.WriteLine("Welcom, you are assigne 1000 Orangies. Type in the number of Orangies assign to you below! ");
-            var userInput = Console.ReadLine();
-            var myOrangies = int.Parse(userInput);
-            var listOfMyOrangies = new List<double>();
 
-            //A do-while loop that will decrease the number of oragies till -1000:
-            do
+            Console.WriteLine($"{playerName} your play time starts from 3 and MAX at 999.");
+
+            Console.WriteLine($"{playerName}, type in the MAX play number to view your play list");
+
+
+            var maxPlayTime = int.Parse(Console.ReadLine());
+            var numOfVideoPlay = 3;
+            var VideoPlayTimes = new List<double>();
+
+            for (numOfVideoPlay = 3; numOfVideoPlay <= maxPlayTime; numOfVideoPlay += 3)
             {
-
-                myOrangies--;
-                listOfMyOrangies.Add(myOrangies);
-
-            } while (myOrangies >= -999);
-
-            foreach (var orange in listOfMyOrangies)
-            {
-                Console.WriteLine($"{orange} orangies");
+                Console.WriteLine($"{numOfVideoPlay}");
             }
 
             //------------End of exercise
