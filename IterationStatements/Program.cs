@@ -7,69 +7,30 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-            for (int i = 0; 0 < 5; i++)
+            //Write a method to check whether a given number is even or odd.
+
+            var x = 2;
+
+            Console.WriteLine("Type in any number and i will guess if it's an even or odd number.");
+
+            Console.WriteLine("Enter a number:");
+            
+
+            var userInput = int.Parse(Console.ReadLine());
+
+
+            if (userInput % x == 0)
             {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 1; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
+
+                Console.WriteLine("Guessed it! It's an Even number.");
             }
 
-            //for (int i = 0; i < 5; i++)
-            //Console.WriteLine($"{I}");
+            else
+            {
+                Console.WriteLine("Got you, is am Odd number!");
+              
+            }
+             
         }
     }
 }
