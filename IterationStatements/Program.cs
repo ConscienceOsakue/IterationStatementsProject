@@ -5,71 +5,30 @@ namespace IterationStatements
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] arge)
         {
-            for (int i = 0; 0 < 5; i++)
+            //Write a method to check if an integer(from the user) is in the range -10 to 10.
+
+            
+
+            var listOfNumber = new List<int>();
+            for(var num = -10; num <= 10; num++)
             {
-                Console.WriteLine($"{i}");
+                listOfNumber.Add(num);
+
             }
-            for (int i = 0; i < 5; i++)
+            Console.WriteLine("Type your number");
+            var userInput = int.Parse(Console.ReadLine());
+
+            if (listOfNumber.Contains(userInput))
             {
-                Console.WriteLine($"{i}");
+                Console.WriteLine($"{userInput} is in range of -10 to 10.");
             }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 1; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
+            else 
+            { 
+                Console.WriteLine($"{userInput} is not found in the range of -10 to 10.");
             }
 
-            //for (int i = 0; i < 5; i++)
-            //Console.WriteLine($"{I}");
         }
     }
 }
