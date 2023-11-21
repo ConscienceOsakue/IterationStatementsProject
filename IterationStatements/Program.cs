@@ -1,75 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Security;
 
 namespace IterationStatements
 {
     class Program
     {
-        static void Main(string[] args)
+        public static string CheckNumber(double favoriteNum)
         {
-            for (int i = 0; 0 < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 1; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine($"{i}");
-            }
+       
+            //Write a method to check whether a given number is positive or negative.
 
-            //for (int i = 0; i < 5; i++)
-            //Console.WriteLine($"{I}");
+            if (favoriteNum > 0)
+            {
+                return "Positive";
+            }
+            else if (favoriteNum <= 0)
+            {
+                return "Negative";
+            }
+            else
+            {
+                return "Time OUT!";
+            }
+        }
+        static void Main()
+        {
+            Console.WriteLine("Hello, type in you favorite number, lets check if it's positive or negative?");
+            var favoriteNum = double.Parse(Console.ReadLine());
+            var result = CheckNumber(favoriteNum);
+            Console.WriteLine($"The number {favoriteNum} is {result}.");
+
+
         }
     }
+
 }
+ 
